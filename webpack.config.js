@@ -1,5 +1,6 @@
 // CJS -> require + module.exports
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Config Webpack'а
 module.exports = {
@@ -20,4 +21,10 @@ module.exports = {
 			},
 		],
 	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: './src/index.html',
+			filename: './index.html',
+		}),
+	],
 };
