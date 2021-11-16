@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log(200)})();
+(()=>{"use strict";console.log({}?.property)})();

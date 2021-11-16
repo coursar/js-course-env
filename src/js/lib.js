@@ -1,5 +1,6 @@
 const calculate = function(arg) {
-	console.log(arg);
+	const val = {};
+	console.log(val?.property);
 };
 
 export default calculate;
