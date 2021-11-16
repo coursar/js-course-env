@@ -1,3 +1,3 @@
-import libCalculate, { utils } from './lib';
+import libCalculate from './lib';
 
 libCalculate(200);

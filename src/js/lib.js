@@ -1,8 +1,8 @@
-const calculate = function(arg) {
-	const val = {};
-	console.log(val?.property);
+const calculate = function () {
+  const val = {};
+  console.log(val?.property);
 };
 
 export default calculate;
 
-export function utils() {};
+export function utils() { }
