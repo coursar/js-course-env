@@ -1,3 +1,3 @@
 import libCalculate, { utils } from './lib';
 
-libCalculate(100);
+libCalculate(200);
