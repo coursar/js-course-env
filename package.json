@@ -10,7 +10,9 @@
     "lint": "eslint src",
     "test": "jest --testPathPattern=./src/",
     "watch": "jest --testPathPattern=./src/ --watch",
-    "coverage": "jest --testPathPattern=./src/ --coverage"
+    "coverage": "jest --testPathPattern=./src/ --coverage",
+    "precoverage:show": "npm run coverage",
+    "coverage:show": "http-server coverage/lcov-report"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +27,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
     "html-webpack-plugin": "^5.5.0",
+    "http-server": "^14.0.0",
     "jest": "^27.3.1",
     "webpack": "^5.64.1",
     "webpack-cli": "^4.9.1",
