@@ -33,12 +33,14 @@ test('should render args', () => {
 
 test('should remove self from DOM on Close btn click', () => {
   const containerEl = document.createElement('div');
-
-  const alertEl = createAlert();
+  const onClose = jest.fn();
+  const alertEl = createAlert({
+    onClose,
+  });
   containerEl.appendChild(alertEl);
 
   const closeEl = getByText(containerEl, 'Close', { exact: false, selector: '[data-action="close"]' });
   fireEvent.click(closeEl);
 
-  expect(containerEl.firstElementChild).toBeNull();
+  expect(onClose).toBeCalledTimes(1);
 });
