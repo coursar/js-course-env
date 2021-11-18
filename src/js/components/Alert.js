@@ -9,7 +9,7 @@ alertTpl.innerHTML = `
 const createAlert = function ({
   message = '',
   image = 'error.svg',
-}) {
+} = {}) {
   const el = alertTpl.content.cloneNode(true);
   const messageEl = el.querySelector('[data-id="message"]');
   const imageEl = el.querySelector('[data-id="image"]');

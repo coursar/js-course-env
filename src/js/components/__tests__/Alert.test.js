@@ -8,7 +8,7 @@ test('should render defaults', () => {
   const containerEl = document.createElement('div');
 
   // (A)ct
-  const alertEl = createAlert({});
+  const alertEl = createAlert();
   containerEl.appendChild(alertEl);
 
   // (A)ssert
