@@ -5,7 +5,7 @@ const common = require('./webpack.common');
 
 module.exports = webpackMerge.merge(common, {
   mode: 'development',
-  devtool: 'eval',
+  devtool: 'eval-source-map',
 
   devServer: {
     historyApiFallback: true,
