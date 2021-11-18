@@ -12,7 +12,9 @@
     "watch": "jest --testPathPattern=./src/ --watch",
     "coverage": "jest --testPathPattern=./src/ --coverage",
     "precoverage:show": "npm run coverage",
-    "coverage:show": "http-server coverage/lcov-report"
+    "coverage:show": "http-server coverage/lcov-report",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +23,12 @@
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/builder-webpack5": "^6.3.12",
+    "@storybook/html": "^6.3.12",
+    "@storybook/manager-webpack5": "^6.3.12",
     "@testing-library/dom": "^8.11.1",
     "@testing-library/jest-dom": "^5.15.0",
     "babel-jest": "^27.3.1",

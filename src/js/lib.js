@@ -1,5 +1,5 @@
 // pure functions (чистая функция)
-const cashback = function (amount) {
+const cashback = (amount) => {
   if (typeof amount !== 'number') {
     throw new Error('amount should be a number');
   }

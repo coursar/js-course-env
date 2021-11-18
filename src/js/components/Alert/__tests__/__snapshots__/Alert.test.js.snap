@@ -6,6 +6,7 @@ exports[`should render args 1`] = `
 
   <div
     class="alert alert-danger"
+    data-widget="alert"
   >
     
   
@@ -21,6 +22,14 @@ exports[`should render args 1`] = `
       src="neutral.svg"
     />
     
+  
+    <button
+      data-action="close"
+      type="button"
+    >
+      Close
+    </button>
+    
 
   </div>
   
@@ -34,6 +43,7 @@ exports[`should render defaults 1`] = `
 
   <div
     class="alert alert-danger"
+    data-widget="alert"
   >
     
   
@@ -46,6 +56,14 @@ exports[`should render defaults 1`] = `
       data-id="image"
       src="error.svg"
     />
+    
+  
+    <button
+      data-action="close"
+      type="button"
+    >
+      Close
+    </button>
     
 
   </div>
