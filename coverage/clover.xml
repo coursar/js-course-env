@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1637144020929" clover="3.2.0">
-  <project timestamp="1637144020929" name="All files">
-    <metrics statements="15" coveredstatements="12" conditionals="10" coveredconditionals="7" methods="1" coveredmethods="1" elements="26" coveredelements="20" complexity="0" loc="15" ncloc="15" packages="2" files="3" classes="3"/>
+<coverage generated="1637221529186" clover="3.2.0">
+  <project timestamp="1637221529186" name="All files">
+    <metrics statements="27" coveredstatements="21" conditionals="12" coveredconditionals="9" methods="2" coveredmethods="2" elements="41" coveredelements="32" complexity="0" loc="27" ncloc="27" packages="3" files="4" classes="4"/>
     <package name="src">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.js" path="/opt/projects/js-course-env/src/index.js">
@@ -9,9 +9,12 @@
       </file>
     </package>
     <package name="src.js">
-      <metrics statements="15" coveredstatements="12" conditionals="10" coveredconditionals="7" methods="1" coveredmethods="1"/>
+      <metrics statements="18" coveredstatements="12" conditionals="10" coveredconditionals="7" methods="1" coveredmethods="1"/>
       <file name="app.js" path="/opt/projects/js-course-env/src/js/app.js">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
       </file>
       <file name="lib.js" path="/opt/projects/js-course-env/src/js/lib.js">
         <metrics statements="15" coveredstatements="12" conditionals="10" coveredconditionals="7" methods="1" coveredmethods="1"/>
@@ -30,6 +33,21 @@
         <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="24" count="1" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.js.components">
+      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="Alert.js" path="/opt/projects/js-course-env/src/js/components/Alert.js">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
       </file>
     </package>
   </project>

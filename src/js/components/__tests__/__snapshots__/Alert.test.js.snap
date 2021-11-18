@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render args 1`] = `
+<div>
+  
+
+  <div
+    class="alert alert-danger"
+  >
+    
+  
+    <span
+      data-id="message"
+    >
+      Network error
+    </span>
+    
+  
+    <img
+      data-id="image"
+      src="neutral.svg"
+    />
+    
+
+  </div>
+  
+
+</div>
+`;
+
+exports[`should render defaults 1`] = `
+<div>
+  
+
+  <div
+    class="alert alert-danger"
+  >
+    
+  
+    <span
+      data-id="message"
+    />
+    
+  
+    <img
+      data-id="image"
+      src="error.svg"
+    />
+    
+
+  </div>
+  
+
+</div>
+`;
