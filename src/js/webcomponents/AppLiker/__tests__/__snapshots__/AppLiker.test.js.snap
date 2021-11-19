@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render liker 1`] = `
+HTMLCollection [
+  <div>
+    
+  
+    <span
+      data-id="likes"
+    >
+      0
+    </span>
+    
+  
+    <button
+      data-action="like"
+    >
+      +
+    </button>
+    
+  
+    <button
+      data-action="dislike"
+    >
+      -
+    </button>
+    
+
+  </div>,
+]
+`;

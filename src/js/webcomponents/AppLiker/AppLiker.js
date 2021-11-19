@@ -13,7 +13,9 @@ class AppLiker extends HTMLElement {
   }
 
   #likesEl;
+
   #likeButtonEl;
+
   #dislikeButtonEl;
 
   #likes = 0;
@@ -43,6 +45,10 @@ class AppLiker extends HTMLElement {
   set likes(val) {
     this.#likes = val;
     this.#updateView();
+  }
+
+  get likes() {
+    return this.#likes;
   }
 
   #updateView() {
