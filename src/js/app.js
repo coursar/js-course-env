@@ -1,13 +1,5 @@
-import createAlert from './components/Alert';
+import createMainPage from './pages/MainPage';
 
 const rootEl = document.getElementById('root');
-const alertEl = createAlert({
-  message: 'error',
-  onClose: () => {
-    rootEl.removeChild(alertEl);
-  },
-});
 
-rootEl.appendChild(
-  alertEl,
-);
+rootEl.appendChild(createMainPage());
