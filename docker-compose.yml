@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  frontend:
+    image: frontend
+    build: .
+    ports:
+      - 8080:80
+    environment:
+      - API=http://backend:9999
+
+  backend:
+    image: TODO
