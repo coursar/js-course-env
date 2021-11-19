@@ -1,7 +1,6 @@
 import store from '../../store';
 import createCard from '../../components/Card';
 import createLoader from '../../components/Loader';
-import { CARDS_LOAD_REQUEST, CARDS_LOAD_SUCCESS } from '../../store/actionTypes';
 
 const template = document.createElement('template');
 template.innerHTML = `
