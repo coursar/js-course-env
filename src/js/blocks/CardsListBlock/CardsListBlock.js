@@ -1,78 +1,43 @@
+import store from '../../store';
 import createCard from '../../components/Card';
 import createLoader from '../../components/Loader';
+import { CARDS_LOAD_REQUEST, CARDS_LOAD_SUCCESS } from '../../store/actionTypes';
 
 const template = document.createElement('template');
 template.innerHTML = `
 <div data-id="loader"></div>
+<div data-id="error"></div>
 <ul data-id="cards-container">
 </ul>
 `;
-
-const cards = [
-  {
-    id: 'afla',
-    link: 'https://alfabank.ru/card/alfa',
-    name: 'Дебетовая Альфа-Карта',
-  },
-  {
-    id: 'afla-premium',
-    link: 'https://alfabank.ru/card/alfa-premium',
-    name: 'Дебетовая Альфа-Карта Premium',
-  },
-];
 
 const createCardsListBlock = () => {
   const elTpl = template.content.cloneNode(true); // DocumentFragment
   const cardsContainerEl = elTpl.querySelector('[data-id="cards-container"]');
   const loaderEl = elTpl.querySelector('[data-id="loader"]');
 
-  loaderEl.appendChild(createLoader());
-
-  const onRemoveItem = (evt, card) => {
-    console.log(evt);
-    const index = cards.indexOf(card);
-    if (index === -1) {
-      return;
+  const subscription = ({ cards }) => {
+    loaderEl.innerHTML = '';
+    if (cards.loading) {
+      loaderEl.appendChild(createLoader());
     }
 
-    cards.splice(index, 1);
-    /* eslint-disable */
     cardsContainerEl.innerHTML = '';
-    for (const card of cards) {
-      const {id, name, link} = card;
-      const cardEl = createCard({
-        name,
-        link,
-        onShowDetail: (evt) => {
-          evt.preventDefault();
-          onRemoveItem(evt, card);
-        },
-      });
-      cardsContainerEl.appendChild(cardEl);
-    }
+    const itemsEls = cards.items.map(({ name, link }) => createCard({
+      name,
+      link,
+      onShowDetail: () => {
+        console.log('show detail');
+      },
+    }));
+    cardsContainerEl.append(...itemsEls);
   };
 
-  setTimeout(() => {
-    loaderEl.innerHTML = '';
+  store.subscribe(subscription);
 
-    /* eslint-disable */
-    for (const card of cards) {
-      const {id, name, link} = card;
-      const cardEl = createCard({
-        name,
-        link,
-        onShowDetail: (evt) => {
-          evt.preventDefault();
-          onRemoveItem(evt, card);
-        },
-      });
-      cardsContainerEl.appendChild(cardEl);
-    }
+  const unsubscribe = () => store.unsubscribe(subscription);
 
-  }, 5000);
-
-  return elTpl;
+  return { el: elTpl, unsubscribe };
 };
 
 export default createCardsListBlock;
-

@@ -19,7 +19,9 @@ const createMainPage = () => {
   }));
 
   const mainEl = elTpl.querySelector('[data-section="main"]');
-  mainEl.appendChild(createCardsListBlock());
+  const component = createCardsListBlock();
+  mainEl.appendChild(component.el);
+  // TODO: если MainPage захочет удалить CardListBlock
 
   return elTpl;
 };
